@@ -9,10 +9,10 @@
             <h3>MyLibrary</h3>
             <p>MyLibrary is your modern solution for seamless library management.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f">facebook</i></a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-linkedin-in"></i>linkedin</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
             </div>
         </div>
 

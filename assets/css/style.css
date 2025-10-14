@@ -12,7 +12,9 @@ body {
     color: #023336;
     line-height: 1.8;
 }
+
 /* navber  */
+/* Desktop navbar */
 .navbar {
     background: #023336;
     display: flex;
@@ -35,7 +37,11 @@ body {
     text-transform: capitalize;
 }
 
-.navbar a {
+.navbar .nav-links {
+    display: flex;
+}
+
+.navbar .nav-links a {
     text-decoration: none;
     color: #EAF8E7;
     font-weight: 600;
@@ -45,10 +51,62 @@ body {
     transition: 0.3s ease;
 }
 
-.navbar a:hover {
+.navbar .nav-links a:hover {
     background: #4DA674;
     color: white;
 }
+
+/* Menu icons */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #EAF8E7;
+    cursor: pointer;
+}
+
+.close-menu {
+    display: none;
+}
+
+/* Mobile drawer */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #023336;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    z-index: 99;
+}
+
+.mobile-drawer a {
+    color: #EAF8E7;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-bottom: 1px solid #4da674;
+    transition: 0.3s;
+}
+
+.mobile-drawer a:hover {
+    background: #4DA674;
+    color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
 /* banner  */
 .banner {
     display: grid;
@@ -254,6 +312,7 @@ body {
         padding: 30px 15px;
     }
 }
+
 /* Gallery Section */
 .gallery {
     text-align: center;
@@ -305,6 +364,7 @@ body {
         font-size: 28px;
     }
 }
+
 /* Testimonials Section */
 .testimonials {
     padding: 50px 50px;
@@ -386,6 +446,7 @@ body {
         margin-bottom: 30px;
     }
 }
+
 /* Footer Section */
 .footer {
     background-color: #023336;

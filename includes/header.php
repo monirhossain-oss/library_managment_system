@@ -15,7 +15,6 @@ include_once __DIR__ . '/../config/db_connect.php';
     <header>
         <nav class="navbar">
             <div class="logo">
-                <!-- <img src="<?php echo BASE_URL; ?>assets/images/logo.png" alt="Library Logo"> -->
                 <h3>My Library</h3>
             </div>
 
@@ -23,9 +22,23 @@ include_once __DIR__ . '/../config/db_connect.php';
                 <a href="<?php echo BASE_URL; ?>index.php">Home</a>
                 <a href="<?php echo BASE_URL; ?>pages/add_book.php">Add Book</a>
                 <a href="<?php echo BASE_URL; ?>pages/view_books.php">View Books</a>
-                <a href="pages/contact.php">Contact</a>
+                <a href="<?php echo BASE_URL; ?>pages/contact.php">Contact</a>
+            </div>
+
+            <div class="menu-icon">
+                <span class="open-menu">&#9776;</span>
+                <span class="close-menu">&#10005;</span>
             </div>
         </nav>
-    </header>
 
+        <!-- Mobile drawer -->
+        <div class="mobile-drawer">
+            <a href="<?php echo BASE_URL; ?>index.php">Home</a>
+            <a href="<?php echo BASE_URL; ?>pages/add_book.php">Add Book</a>
+            <a href="<?php echo BASE_URL; ?>pages/view_books.php">View Books</a>
+            <a href="<?php echo BASE_URL; ?>pages/contact.php">Contact</a>
+        </div>
+    </header>
     <main>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="<?php echo BASE_URL; ?>config/index.js"></script>  
