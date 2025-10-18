@@ -1,5 +1,5 @@
 <?php
-session_start(); // session start
+session_start();
 include_once __DIR__ . '/../config/db_connect.php';
 ?>
 <!DOCTYPE html>
