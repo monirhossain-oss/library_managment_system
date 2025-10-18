@@ -37,9 +37,9 @@ if (isset($_POST['submit'])) {
         $result = addBook($title, $author, $genre, $year, $price, $desc, $image);
 
         if ($result === true) {
-            $message = '✅ Book added successfully!';
+            $message = ' Book added successfully!';
         } else {
-            $message = '❌ Error: ' . $result;
+            $message = ' Error: ' . $result;
         }
     }
 }
