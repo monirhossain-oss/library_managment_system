@@ -1,4 +1,5 @@
 <?php
+session_start(); // session start
 include_once __DIR__ . '/../config/db_connect.php';
 ?>
 <!DOCTYPE html>
@@ -20,8 +21,15 @@ include_once __DIR__ . '/../config/db_connect.php';
 
             <div class="nav-links">
                 <a href="<?php echo BASE_URL; ?>index.php">Home</a>
-                <a href="<?php echo BASE_URL; ?>pages/add_book.php">Add Book</a>
-                <a href="<?php echo BASE_URL; ?>pages/view_books.php">View Books</a>
+
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="<?php echo BASE_URL; ?>pages/add_book.php">Add Book</a>
+                    <a href="<?php echo BASE_URL; ?>pages/view_books.php">View Books</a>
+                    <a href="<?php echo BASE_URL; ?>pages/logout.php">Logout</a>
+                <?php else : ?>
+                    <a href="<?php echo BASE_URL; ?>pages/login.php">Login</a>
+                <?php endif; ?>
+
                 <a href="<?php echo BASE_URL; ?>pages/contact.php">Contact</a>
             </div>
 
@@ -34,11 +42,17 @@ include_once __DIR__ . '/../config/db_connect.php';
         <!-- Mobile drawer -->
         <div class="mobile-drawer">
             <a href="<?php echo BASE_URL; ?>index.php">Home</a>
-            <a href="<?php echo BASE_URL; ?>pages/add_book.php">Add Book</a>
-            <a href="<?php echo BASE_URL; ?>pages/view_books.php">View Books</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="<?php echo BASE_URL; ?>pages/add_book.php">Add Book</a>
+                <a href="<?php echo BASE_URL; ?>pages/view_books.php">View Books</a>
+                <a href="<?php echo BASE_URL; ?>pages/logout.php">Logout</a>
+            <?php else: ?>
+                <a href="<?php echo BASE_URL; ?>pages/login.php">Login</a>
+            <?php endif; ?>
             <a href="<?php echo BASE_URL; ?>pages/contact.php">Contact</a>
         </div>
     </header>
+
     <main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="<?php echo BASE_URL; ?>config/index.js"></script>  
+        <script src="<?php echo BASE_URL; ?>config/index.js"></script>

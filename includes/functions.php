@@ -17,6 +17,31 @@ function addBook($title, $author, $genre, $year, $price, $desc, $image)
     }
 }
 
+global $conn;
+
+function addUser($full_name,$email,$password){
+    global $conn;
+    $hased_password = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO users (full_name, email, password) VALUES ('$full_name','$email','$hased_password')";
+    if ($conn->query($sql)) {
+        return true;
+    }else{
+        return $conn->error;
+    }
+}
+
+
+function getUserByEmail( $email ){
+    global $conn;
+    $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1 ";
+    
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc();
+    }else{
+        return false;
+    }
+}
 
 // function to get all books 
 function getAllBooks()
