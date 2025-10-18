@@ -14,7 +14,6 @@ body {
 }
 
 /* navber  */
-/* Desktop navbar */
 .navbar {
     background: #023336;
     display: flex;
@@ -96,7 +95,7 @@ body {
     color: white;
 }
 
-/* Responsive */
+
 @media screen and (max-width: 768px) {
     .navbar .nav-links {
         display: none;
@@ -463,7 +462,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Brand part */
 .footer-brand {
     flex: 1 1 250px;
 }
@@ -549,7 +547,6 @@ body {
     color: #C1E6BA;
 }
 
-/*  Responsive */
 @media (max-width: 900px) {
     .footer-container {
         flex-direction: column;
