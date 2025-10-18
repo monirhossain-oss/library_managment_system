@@ -87,7 +87,6 @@ textarea {
     color: #EAF8E7;
 }
 
-/* ✅ Responsive Design */
 @media (max-width: 768px) {
     .add-book-title {
         font-size: 28px;
