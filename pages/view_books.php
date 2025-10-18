@@ -12,7 +12,6 @@ include_once '../includes/header.php';
 $books = getAllBooks();
 ?>
 
-<!-- Link to CSS -->
 <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/viewBook.css">
 
 <h2>All Books</h2>
@@ -26,7 +25,7 @@ $books = getAllBooks();
                 <h3><?php echo htmlspecialchars($book['book_title']); ?></h3>
                 <p><b>Author:</b> <?php echo htmlspecialchars($book['author_name']); ?></p>
                 <p><b>Price:</b> ৳<?php echo htmlspecialchars($book['price']); ?></p>
-                <a href="book_details.php?id=<?php echo $row['id']; ?>" class="details-btn">🔍 View Details</a>
+                <a href="book_details.php?id=<?php echo $row['id']; ?>" class="details-btn"> View Details</a>
             </div>
         <?php endwhile; ?>
     <?php else: ?>
@@ -35,6 +34,5 @@ $books = getAllBooks();
 </div>
 
 <?php
-// Include footer
 include_once '../includes/footer.php';
 ?>
