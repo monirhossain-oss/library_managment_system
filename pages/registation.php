@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $result = addUser($name, $email, $password);
         if ($result === true) {
-            // Registration success → Redirect to login page
             header("Location: login.php?registered=1");
             exit;
         } else {
